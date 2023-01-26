@@ -1,1 +1,1 @@
-# study-bunnies
+# Study Buddies
