@@ -2,8 +2,8 @@ const router = require("express").Router();
 const {Post} = require ("../../models");
 const withAuth = require("../../utils/auth");
 
-//add withAuth before asynce once /login /logout is  
-router.post("/", async(req,res) => {
+//add withAuth before asynce once /login /logout is done
+router.post("/", withAuth, async(req,res) => {
     console.log('POST /post')
     console.log(req.body)
     try {
