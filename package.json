@@ -1,5 +1,5 @@
 {
-  "name": "study-bunnies",
+  "name": "study-buddies",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ssnakeoil/study-bunnies.git"
+    "url": "git+https://github.com/ssnakeoil/study-buddies.git"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +28,7 @@
   
 
   "bugs": {
-  "url": "https://github.com/ssnakeoil/study-bunnies/issues"
+  "url": "https://github.com/ssnakeoil/study-buddies/issues"
 },
-"homepage": "https://github.com/ssnakeoil/study-bunnies#readme"
+"homepage": "https://github.com/ssnakeoil/study-buddies#readme"
 }
