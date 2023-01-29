@@ -6,9 +6,21 @@
         "password": "password"
     },
     {
-        "first_name": "Michelle",
-        "last_name": "T",
-        "email": "Michelle@test.com",
+        "first_name": "Stefi",
+        "last_name": "L",
+        "email": "Stefi@test.com",
+        "password": "password"
+    },
+    {
+        "first_name": "Rabia",
+        "last_name": "K",
+        "email": "Rabia@test.com",
+        "password": "password"
+    },
+    {
+        "first_name": "Yasmine",
+        "last_name": "M",
+        "email": "Yasmine@test.com",
         "password": "password"
     }
 

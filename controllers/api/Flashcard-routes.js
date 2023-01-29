@@ -19,6 +19,7 @@ router.post("/", withAuth, async(req,res) => {
     }
 })
 
+//when getting flashcards make it so user can only get their own flashcards.
 
 
 
