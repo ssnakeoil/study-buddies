@@ -27,7 +27,7 @@ N/A
 
 - Link: [Jessica Tran](https://github.com/jessikea 'Github page for Jess Tran')
 - Link: [Stefi Lao](https://github.com/ssnakeoil 'Github page for Stefi Lao')
-- Link: [Rabia](https://github.com/ 'Github page for Rabia ')
+- Link: [Rabia](https://github.com/rabia-desing 'Github page for Rabia ')
 - Link: [](https://github.com/yasmineashoush5 'Github page for Yasmine')
 
 ## License
