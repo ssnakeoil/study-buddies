@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "dev":"nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,11 @@
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },
-  
-
   "bugs": {
-  "url": "https://github.com/ssnakeoil/study-buddies/issues"
-},
-"homepage": "https://github.com/ssnakeoil/study-buddies#readme"
+    "url": "https://github.com/ssnakeoil/study-buddies/issues"
+  },
+  "homepage": "https://github.com/ssnakeoil/study-buddies#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
