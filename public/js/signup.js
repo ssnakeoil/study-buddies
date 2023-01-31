@@ -1,12 +1,12 @@
 const signupHandler = async (event) => {
     event.preventDefault();
-
     const firstName = document.querySelector('#first_name').value.trim();
     const lastName = document.querySelector('#last_name').value.trim();
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
-
-    if (firstName && lastName && email && password) {
+    if (password.length < 8) {
+        alert("The minimum password length is 8 characters.");
+    } else if (firstName && lastName && email && password) {
         const response = await fetch(`/api/user`, {
             method: 'POST',
             body: JSON.stringify({ firstName, lastName, email, password }),
@@ -16,10 +16,8 @@ const signupHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/')
         } else {
-            console.log('Test')
             alert(response.statusText);
         }
     }
 };
-
-document.querySelector('.signup-form').addEventListener('submit', signupHandler);
+document.querySelector(".signupbtn").addEventListener("click", signupHandler);

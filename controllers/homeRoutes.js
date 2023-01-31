@@ -1,14 +1,21 @@
 const router = require("express").Router();
 const { User, Post, Comment, Flashcard } = require("../models")
-const withAuth = require("../utils/auth");
+const { withAuth, noSession } = require("../utils/auth");
 
+//home route
+router.get('/', withAuth, (req, res) => {
+  res.render('home');
+})
 
-router.get("/signup", async (req, res) => {
+//signup route
+router.get("/signup", noSession, async (req, res) => {
   console.log(`GET /login`);
   res.render("signup");
 });
 
-router.get("/login", async (req, res) => {
+
+// login route
+router.get("/login", noSession, async (req, res) => {
   console.log(`GET /login`);
   if (req.session.logged_in) {
     res.redirect("/");
@@ -18,7 +25,8 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 
-router.get("/logout", async (req, res) => {
+// logout route
+router.get("/logout", withAuth, async (req, res) => {
   console.log(`GET /logout`);
   if (req.session.logged_in) {
     req.session.destroy(() => {
