@@ -19,3 +19,5 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
+
+// This file does not need to be modified

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "post 1",
+        "text": "something about post",
+        "user_id": 1
+    },  
+    {
+        "id": 2,
+        "name": "post 2",
+        "text": "something about post",
+        "user_id": 2
+    },  
+    {
+        "id": 3,
+        "name": "post 3",
+        "text": "something about post",
+        "user_id": 1
+    },  
+    {
+        "id": 4,
+        "name": "post 4",
+        "text": "something about post",
+        "user_id": 4
+    },  
+    {
+        "id": 5,
+        "name": "post 5",
+        "text": "something about post",
+        "user_id": 3
+    }
+]

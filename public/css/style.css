@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+title {
+    font-size: 20px;
+
+}
+
+h1 {
+    font-weight: 800;
+    font-style: italic;
+    color: darkblue font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+
+
+
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    background-color: darkturquoise;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containers {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    perspective: 800px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 310px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    margin-bottom: 30px;
+}
+
+.card div {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backface-visibility: hidden;
+    padding: 10px;
+}
+
+.card .front {
+    background-color: rgb(247, 242, 178);
+    border: 1px solid#ccc;
+    border-radius: 10px color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+}
+
+.card .back {
+    background-color: lightcoral;
+    transform: rotateY(180deg);
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+
+}
+
+.flip {
+    padding: 5px 15 px;
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid #ccc;
+
+}
+
+.flip {
+    width: 80px;
+    padding: 5px 10px;
+    background-color: #ccc;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 7px;
+}
