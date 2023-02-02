@@ -1,0 +1,28 @@
+<div>
+  <div>
+    <div>
+      <div class="post-container">
+        {{#each posts as |post|}}
+        {{> post-details}}
+
+        <div class="comments-container">
+          {{#each post.comments as |comment|}}
+          {{> comment-details }}
+          {{/each}}
+        </div>
+
+        {{/each}}
+      </div>
+    </div>
+    <div>
+      <div class="card addPostCard">
+        <h3>Add New Entry:</h3>
+        <a href="/post">
+        <i>+</i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/comment.js"></script>
+<script src="/js/deletePost.js"></script>
