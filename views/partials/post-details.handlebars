@@ -1,0 +1,36 @@
+<div>
+  <div>
+    <button
+      class="btn delete-post"
+      data-delete-post-id="{{id}}"
+    >Delete Post</button>
+    <h3 class="post-title">{{name}}</h3>
+    <p class= "post-user">Posted by: 
+      {{user.first_name}}
+      {{user.last_name}}
+      on
+      {{format_date date_created}}.
+    </p>
+    <p id="post-id">{{id}}</p>
+    <div>
+      <p class="post-text">
+        {{text}}
+      </p>
+    </div>
+    <form class="form new-comment-form">
+      <div class="form-group comment-form">
+        <label for="comment-text" id="commentLabel">Comment:</label>
+        <textarea
+          class="form-input"
+          id="comment-text"
+          name="comment-text"
+        ></textarea>
+        <button
+          type="submit"
+          class="addComment"
+          data-post-id="{{id}}"
+        >+</button>
+      </div>
+    </form>
+  </div>
+</div>
