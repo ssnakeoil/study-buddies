@@ -2,16 +2,16 @@ const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");
 const Flashcard = require("./Flashcard");
-
-module.exports = { User, Post, Comment, Flashcard };
+const Messages = require("./Messages");
+module.exports = { User, Post, Comment, Flashcard, Messages };
 
 User.hasMany(Post, {
     foreignKey: "user_id",
     onDelete: "CASCADE",
 });
 User.hasMany(Comment, {
-    foreignKey:"user_id",
-    onDelete:"CASCADE"
+    foreignKey: "user_id",
+    onDelete: "CASCADE"
 });
 
 User.hasMany(Flashcard, {
