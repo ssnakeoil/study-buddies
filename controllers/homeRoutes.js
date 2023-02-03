@@ -99,4 +99,63 @@ router.get("/posts/:id", async (req, res) => {
 });
 
 
+router.get("/flashcards", withAuth, async (req, res) => {
+  console.log(`GET /flashcards`);
+  res.render("addflash", {
+    logged_in: true,
+  });
+});
+
+
+// Cant figure out how to just get one user's flashcard//
+// Rabia Help//
+router.get("/flash", withAuth, async (req, res) => {
+  console.log(`GET /flash`);
+  try {
+    const flashData = await Flashcard.findAll({
+      order: [["date_created", "DESC"]],
+      include: [
+        {
+    
+        },
+      ],
+    });
+    console.log(flashData);
+
+    const flash = flashData.map((flash) => flash.get({ plain: true }));
+
+    res.render("flash", {
+      flash,
+      logged_in: true,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/flash/:id", async (req, res) => {
+  try {
+    const flashData = await Flashcard.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attribute: ["first_name", "last_name"],
+        },
+      ],
+    });
+
+    const flashcd = flashData.get({ plain: true });
+
+    res.render("flash", {
+      ...flashcd,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
 module.exports = router;
