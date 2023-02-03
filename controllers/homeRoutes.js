@@ -108,13 +108,16 @@ router.get("/flashcards", withAuth, async (req, res) => {
 
 
 // Cant figure out how to just get one user's flashcard//
+// Rabia Help//
 router.get("/flash", withAuth, async (req, res) => {
   console.log(`GET /flash`);
   try {
     const flashData = await Flashcard.findAll({
       order: [["date_created", "DESC"]],
       include: [
-  
+        {
+    
+        },
       ],
     });
     console.log(flashData);
