@@ -1,12 +1,20 @@
-
-<nav class="navbar">
-    <div class="container">
-        <div class="title">Home</div>
-            {{!-- <li><a href="/" class="btn-flat">Home</a></li> --}}
-            <a href="/posts" class="btn-flat">Posts</a>
-            <a href="/flashcard" class="btn-flat">Flash</a>
-            <a href="/logout" class="btn-flat" id="logout">Logout</a>
+<nav>
+    <h1 class="site-name">Study Buddies</h1>
+    <div class="toggle">
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<input type="checkbox" id="navToggle" />
+	</div>
 </nav>
+
 <section>
     {{!-- <button onclick="window.location.href='/logout'">Logout</button> --}}
 </section>
+
+<aside>
+	<a href="/home">Home</a>
+	<a href="/posts">Posts</a>
+	<a href="/flashcards">Flashcards</a>
+	<a href="/logout">Logout</a>
+</aside>
