@@ -40,6 +40,14 @@ Flashcard.belongsTo(User, {
     foreignKey: "user_id",
 });
 
+User.hasMany(Messages, {
+    as: "Usender",
+    foreignKey: "sender_id",
+});
+User.hasMany(Messages, {
+    as: "Ureceiver",
+    foreignKey: "receiver_id",
+});
 Messages.belongsTo(User, {
     as: "sender",
     foreignKey: "sender_id",
