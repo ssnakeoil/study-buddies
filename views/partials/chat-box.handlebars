@@ -1,0 +1,39 @@
+<section class="chatBox" id="chatBox">
+    <h1 style="color: white;margin: 5px;user-select:none">Live Chat</h1>
+    <span id="closeChat">
+        x
+    </span>
+    <section class="chatBoxInner" id="chatBoxInner">
+        <div id="chats">
+            <div id="sender">
+                <div class="flex-100">
+                    <p>
+                        Hi, how can i help you?
+                    </p>
+                </div>
+                 <div class="senderDpWrapper">
+                    <div class="senderDp">
+                    </div>
+                    <div>
+                        <h3 class="m0f11">
+                            Admin
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="msgFormWrapper">
+            <div class="msgFormWrapperInner">
+                <div class="msgTxtArea">
+                    <textarea id="text"></textarea>
+                    {{!-- <input type="text" placeholder="Enter Message"> --}}
+                </div>
+                <div class="w20">
+                    <button id="sendMessage">Send</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</section>
+<script src="js/chats.js"></script>

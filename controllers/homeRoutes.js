@@ -4,7 +4,7 @@ const { withAuth, noSession } = require("../utils/auth");
 
 //home route
 router.get('/', withAuth, (req, res) => {
-  res.render('home');
+  res.render('home', { isAdmin: req.session.isAdmin });
 })
 
 //signup route
@@ -116,7 +116,7 @@ router.get("/flash", withAuth, async (req, res) => {
       order: [["date_created", "DESC"]],
       include: [
         {
-    
+
         },
       ],
     });

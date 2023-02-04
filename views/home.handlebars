@@ -1,12 +1,10 @@
-
-<nav class="navbar">
-    <a href="/" class="btn-flat">Home</a>
-    <a href="/posts" class="btn-flat">Posts</a>
-    <a href="/flashcards" class="btn-flat">Flash</a>
-    <a href="/logout" class="btn-flat" id="logout">Logout</a>
-
-</nav>
 <section>
     <h3>Home</h3>
     {{!-- <button onclick="window.location.href='/logout'">Logout</button> --}}
+    {{#if isAdmin}}
+    {{> admin-select-chats}}
+    {{> admin-chat-box}}
+    {{else}}
+    {{> chat-box}}
+    {{/if}}
 </section>

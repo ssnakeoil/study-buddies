@@ -1,0 +1,40 @@
+<section class="chatBox" id="chatBox">
+    <h1 style="color: white;margin: 5px;user-select:none">Admin Live Chat</h1>
+    <span id="closeChat">
+        x
+    </span>
+    <section class="chatBoxInner" id="chatBoxInner">
+        <div id="sender">
+                <div class="flex-100">
+                    <p>
+                        Select any chat from list to see messages
+                    </p>
+                </div>
+                 <div class="senderDpWrapper">
+                    <div class="senderDp">
+                    </div>
+                    <div>
+                        <h3 class="m0f11">
+                            System
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        <div id="chats" style="height: 60%;">
+            
+        </div>
+        <div class="msgFormWrapper">
+            <div class="msgFormWrapperInner">
+                <div class="msgTxtArea">
+                    <textarea id="text"></textarea>
+                    {{!-- <input type="text" placeholder="Enter Message"> --}}
+                </div>
+                <div class="w20">
+                    <button id="sendMessage">Send</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</section>
+<script src="js/adminChats.js"></script>
