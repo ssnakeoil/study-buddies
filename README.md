@@ -20,11 +20,10 @@ N/A
 
 
 ## Credits
-
-- Link: [Jessica Tran](https://github.com/jessikea 'Github page for Jess Tran')
-- Link: [Stefi Lao](https://github.com/ssnakeoil 'Github page for Stefi Lao')
-- Link: [Rabia](https://github.com/rabia-desing 'Github page for Rabia')
-- Link: [Yasmine](https://github.com/yasmineashoush5 'Github page for Yasmine ')
+- Link: [Jessica Tran](https://github.com/jessikea) Github 
+- Link: [Stefi Lao](https://github.com/ssnakeoil) Github 
+- Link: [Rabia](https://github.com/rabia-desing) Github 
+- Link: [Yasmine](https://github.com/yasmineashoush5) Github 
 
 ## License
 
