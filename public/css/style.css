@@ -97,3 +97,20 @@
 #sendMessage{
     height: 100%;width: 100%;cursor: pointer;color:white;border:none;background:#536976;background: -webkit-linear-gradient(to right, #292E49, #536976);background: linear-gradient(to right, #292E49, #536976);
 }
+
+#chatsList > li{
+    width: 100px;
+    text-align: center;
+    background: blue;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: black;
+    margin: 12px 0;
+    box-shadow: 0 2px 1px 2px gray;
+    user-select: none;
+}
+#chatsList > li > span{
+    color: white;
+}

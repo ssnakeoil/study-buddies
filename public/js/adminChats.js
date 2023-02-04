@@ -6,6 +6,7 @@ const lastStatus = async (e) => {
     getChatsList();
     if (selectedChat) {
         getAllMessages(selectedChat);
+        await localStorage.setItem('isHidden', 0);
     } else {
         return;
     }
@@ -14,6 +15,7 @@ const lastStatus = async (e) => {
     if (isHidden == undefined) {
         return;
     }
+
     if (isHidden == 0) {
         await localStorage.setItem('isHidden', 1);
         chatBoxShowHide();
@@ -75,7 +77,7 @@ let getChatsList = async (event) => {
             elem.message
             elem.senderId
             messages += `<li class="listItem" onclick="showSelectedChat(` + elem.senderId + `)">
-            `+ elem.sender + `
+            <span>`+ elem.sender + `</span>
             </li>`
 
         });
@@ -119,6 +121,7 @@ let getAllMessages = async (selectedChat) => {
             messages += temp;
 
         });
+        chats.innerHTML = "";
         appendMessage(messages);
     } else {
         alert(response.statusText);
