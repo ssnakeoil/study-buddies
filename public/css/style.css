@@ -129,7 +129,8 @@ aside a::before {
 
 aside a:hover::before {
 	transform: scaleX(1);
-=======
+}
+
 .chatBox{
     position: fixed; right:50px;bottom:0;background:#004dc6;width:300px;height:30px;text-align:center;border-top-left-radius: 15px;border-top-right-radius: 15px;box-shadow: 0 0px 5px 3px #000;display: flex;justify-content: center;flex-direction: column;
 }
