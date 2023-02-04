@@ -23,10 +23,6 @@ Messages.init(
         message: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true
-            }
         },
     },
     {

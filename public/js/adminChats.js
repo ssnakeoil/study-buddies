@@ -1,7 +1,15 @@
 let chatBox = document.getElementById("chatBox");
 let closeBtn = document.getElementById("closeChat");
+let chatsList = document.getElementById("chatsList");
+let selectedChat = null;
 const lastStatus = async (e) => {
-    getAllMessages();
+    getChatsList();
+    if (selectedChat) {
+        getAllMessages(selectedChat);
+    } else {
+        return;
+    }
+
     var isHidden = localStorage.getItem('isHidden');
     if (isHidden == undefined) {
         return;
@@ -12,6 +20,13 @@ const lastStatus = async (e) => {
     }
 
 };
+function showSelectedChat(id) {
+    if (selectedChat == id) {
+        return;
+    }
+    selectedChat = id
+    lastStatus()
+}
 
 let chatBoxShowHide = async (elem) => {
     let isHidden = localStorage.getItem('isHidden');
@@ -46,14 +61,34 @@ let closeChat = async (elem) => {
     return;
 }
 
+let getChatsList = async (event) => {
+    const response = await fetch(`/api/chat/admin/list`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    })
+    if (response.ok) {
+        let getPromise = await response.json().then(body => { return body });
+        let parseMessages = JSON.parse(getPromise);
+        let messages = '';
+        parseMessages.forEach(elem => {
+            elem.sender
+            elem.message
+            elem.senderId
+            messages += `<li class="listItem" onclick="showSelectedChat(` + elem.senderId + `)">
+            `+ elem.sender + `
+            </li>`
 
+        });
+        chatsList.innerHTML = messages
+    }
+}
 let send = async (event) => {
     event.preventDefault();
     const message = document.querySelector('#text').value.trim();
     if (text == "") {
         alert("Empty message can't be sent");
     } else {
-        const response = await fetch(`/api/chat/send`, {
+        const response = await fetch(`/api/chat/admin/send?id=` + selectedChat, {
             method: 'POST',
             body: JSON.stringify({ message }),
             headers: { 'Content-Type': 'application/json' }
@@ -67,8 +102,8 @@ let send = async (event) => {
     }
 }
 
-let getAllMessages = async () => {
-    const response = await fetch(`/api/chat/`, {
+let getAllMessages = async (selectedChat) => {
+    const response = await fetch(`/api/chat/admin/?id=` + selectedChat, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     })
@@ -91,7 +126,10 @@ let getAllMessages = async () => {
 
 }
 let getNewMessages = async () => {
-    const response = await fetch(`/api/chat/`, {
+    if (selectedChat == null) {
+        return;
+    }
+    const response = await fetch(`/api/chat/admin/?id=` + selectedChat, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     })
@@ -115,10 +153,7 @@ let getNewMessages = async () => {
             if (i < newLength) {
                 return;
             }
-            // if (i == newLength && elem.sender) {
-            //     return;
-            // }
-            if (i == newLength && elem.sender != 'Admin') {
+            if (i == newLength && elem.sender == 'Admin') {
                 return;
             }
             let temp;

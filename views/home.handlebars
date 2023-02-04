@@ -1,5 +1,10 @@
 <section>
     <h3>Home</h3>
     {{!-- <button onclick="window.location.href='/logout'">Logout</button> --}}
+    {{#if isAdmin}}
+    {{> admin-select-chats}}
+    {{> admin-chat-box}}
+    {{else}}
     {{> chat-box}}
+    {{/if}}
 </section>

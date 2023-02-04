@@ -1,20 +1,99 @@
 .chatBox{
-    position: fixed; right:50px;bottom:0;background:#004dc6;width:300px;height:30px;text-align:center;border-top-left-radius: 15px;border-top-right-radius: 15px;box-shadow: 0 0px 5px 3px #000;cursor:pointer;display: flex;justify-content: center;flex-direction: column;
+    position: fixed; right:50px;bottom:0;background:#004dc6;width:300px;height:30px;text-align:center;border-top-left-radius: 15px;border-top-right-radius: 15px;box-shadow: 0 0px 5px 3px #000;display: flex;justify-content: center;flex-direction: column;
 }
 .chatBox > .chatBoxInner{
     display: none;
 }
 .chatBoxOpen{
-    position: fixed; right:50px;bottom:0;background:#004dc6;width:350px;height:300px;text-align:center;border-top-left-radius: 15px;border-top-right-radius: 15px;box-shadow: 0 0px 5px 3px #000;cursor:pointer;display: flex;justify-content: center;flex-direction: column;
+    position: fixed; right:50px;bottom:0;background:#004dc6;width:350px;height:400px;text-align:center;border-top-left-radius: 15px;border-top-right-radius: 15px;box-shadow: 0 0px 5px 3px #000;display: flex;justify-content: center;flex-direction: column;
 }
 .chatBoxOpen > .chatBoxInner{
+    position: relative;
     display: block;
-    padding: 15px;
+    padding: 5px;
     background-color: white;
     height: 100%;
     margin: 0 6px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     box-shadow: 0 0 2px 2px #551a8b;
-    cursor: grab;
+    overflow: hidden;
+   
+}
+#chats{
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    height: 85%;
+}
+#chats::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+#closeChat{
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    width: 30px;
+    height: 31px;
+    line-height: 30px;
+    background: #4b5e6d;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 50%;
+}
+
+#sender{
+    display: flex;flex-direction: row;border-radius: 5px;padding: 5px 5px;background: #1488CC;background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);background: linear-gradient(to right, #2B32B2, #1488CC);color: white;margin:5px
+}
+
+.flex-100{
+    flex: 100%;
+}
+.senderDpWrapper{
+    display:flex;flex-direction:column;align-items:center;
+}
+.senderDp{
+    border-radius: 50%;width: 50px;height: 50px;background: #314755;background: -webkit-linear-gradient(to right, #26a0da, #314755);background: linear-gradient(to right, #26a0da, #314755);
+}
+.m0f11{
+    margin: 0;font-size: 11px;
+}
+
+#receiver{
+    display: flex;flex-direction: row;border-radius: 5px;padding: 5px 5px;background: #1488CC;background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);background: linear-gradient(to right, #2B32B2, #1488CC);color: white;margin:5px
+}
+
+.receiverDpWrapper{
+    display:flex;flex-direction:column;align-items:center;
+}
+
+.receiverDp{
+    border-radius: 50%;width: 50px;height: 50px;background: #314755;background: -webkit-linear-gradient(to right, #26a0da, #314755);background: linear-gradient(to right, #26a0da, #314755);
+}
+
+.msgFormWrapper{
+    position: absolute;bottom: 0;width: 100%;background: gray;left: 0;display: flex;box-shadow: 0px -3px 2px -2px gray;
+}
+
+.msgFormWrapperInner{
+    display: flex;width:100%
+}
+
+.msgTxtArea{
+    width: 100%;overflow:hidden
+}
+
+#text{
+    resize: none;width:100%
+}
+
+.w20{
+    width: 20%;
+}
+#sendMessage{
+    height: 100%;width: 100%;cursor: pointer;color:white;border:none;background:#536976;background: -webkit-linear-gradient(to right, #292E49, #536976);background: linear-gradient(to right, #292E49, #536976);
 }

@@ -39,3 +39,12 @@ Comment.belongsTo(User, {
 Flashcard.belongsTo(User, {
     foreignKey: "user_id",
 });
+
+Messages.belongsTo(User, {
+    as: "sender",
+    foreignKey: "sender_id",
+});
+Messages.belongsTo(User, {
+    as: "receiver",
+    foreignKey: "receiver_id",
+});
