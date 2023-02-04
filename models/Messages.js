@@ -13,24 +13,29 @@ Messages.init(
             autoIncrement: true,
         },
         sender_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         receiver_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         message: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: true,
+            defaultValue: DataTypes.NOW,
+        },
     },
     {
         sequelize,
         timestamps: false,
-        freezeTableName: true,
+        freezeTableName: false,
         underscored: true,
-        modelName: 'messsges',
+        modelName: 'messages',
     }
 );
 
