@@ -1,28 +1,43 @@
-<div>
-  <div>
-    <div>
-      <div class="post-container">
-        {{#each posts as |post|}}
-        {{> post-details}}
+<div id="posts-page-background">
+  <div class="centered-container">
+    <div class="all-posts-container">
+      <img src="https://assets.codepen.io/9054081/brainstorm_header.png" />
+      <div>
+        <div class="post-container">
+          <div>
+            <form class="center-button" action="/post">
+              <button>Create New Post</button>
+            </form>
+          </div>
+          {{#each posts as |post|}}
+          {{> post-details}}
 
-        <div class="comments-container">
-          {{#each post.comments as |comment|}}
-          {{> comment-details }}
+          <div class="comments-container">
+            <form class="form new-comment-form">
+              <div class="form-group comment-form">
+                <label for="comment-text" id="commentLabel">Comment:</label>
+                <textarea
+                class="form-input"
+                id="comment-text"
+                name="comment-text"></textarea>
+                <button
+                type="submit"
+                class="addComment"
+                data-post-id="{{id}}"
+                >post</button>
+              </div>
+            </form>
+            <p>Comments for "{{name}}":
+
+            {{#each post.comments as |comment|}}
+            {{> comment-details }}
+            {{/each}}
+          </div>
+
           {{/each}}
         </div>
-
-        {{/each}}
       </div>
-    </div>
-    <div>
-      <div class="card addPostCard">
-        <h3>Add New Entry:</h3>
-        <a href="/post">
-        <i>+</i></a>
-      </div>
-    </div>
   </div>
 </div>
-
 <script src="/js/comment.js"></script>
 <script src="/js/deletePost.js"></script>

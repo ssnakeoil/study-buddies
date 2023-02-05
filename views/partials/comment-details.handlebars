@@ -1,5 +1,6 @@
 <div class="col-md-3 card comments">
-  <p>{{comment}} by user {{user_id}} {{format_date date_created}}</p>
-  <button class="removeComment"
-    data-comment-id="{{id}}">-</button>
+  <p>{{comment}}</p>
+  <p class="post-user">from {{user_id}} on {{format_date date_created}}</p>
+   <button class="removeComment"
+    data-comment-id="{{id}}">delete comment</button>
 </div>

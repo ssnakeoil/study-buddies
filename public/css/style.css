@@ -135,14 +135,73 @@ aside a:hover::before {
 
 /* ############## END NAV BAR STYLE ################## */
 
+/* ################### POST STYLES */
+
+.center-button {
+	display: flex;
+	align-content: center;
+}
+
+#posts-page-background {
+	min-height: 100vh;
+	background: linear-gradient(#00528E, #42A9D5);
+}
+
+.all-posts-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.post-container {
+	width: 600px;
+	margin-left: 50px;
+	background: #00528E;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.comments-container {
+	margin: 5px 50px;
+	border-radius: 20px 0px 20px 20px;
+	padding: 20px;
+	width: 500px;
+	background: #42A9D5;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center; */
+}
+
+.post-user {
+	font-size: 15px;
+	font-style: oblique;
+}
+
+.comments {
+	background: white;
+	opacity: 50%;
+	padding: 10px;
+	width: 600;
+	margin: 2px 0px;
+}
+.comments:hover {
+	opacity: 100%;
+}
+
+.removeComment {
+	display: flex;
+	align-content: left;
+}
+/* ################### END POST STYLES */
+
 /* ############# LOGIN/SIGN UP STYLE ############## */
 
-.logsign-container {
+.centered-container {
 	display: flex;
 	justify-content: center;
   }
   
-  #login-box {
+  #login-box{
 	min-width: 500px;
 	margin-top: 2%;
 	border-radius: 20px;
@@ -153,7 +212,8 @@ aside a:hover::before {
 	background: #FFBE94;
   }
   
-  #log-container {
+  #log-container,
+  #sign-up-container {
 	padding: 30px;
 	display: flex;
 	align-items: center;
@@ -212,6 +272,8 @@ aside a:hover::before {
 }
 
 /* ################# END HOME BUTTONS */
+
+
 
 /* ############## CHAT BOX STYLE ##################### */
 
