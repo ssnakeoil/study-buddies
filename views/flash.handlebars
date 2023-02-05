@@ -1,1 +1,20 @@
-{{!-- This will be where user can see all their flash cards --}}
+<section class="content">
+    <div class="containers">
+
+
+        <div class="card">
+            {{#each flash as |flashcard|}}
+            <button class="btn delete-flash" data-delete-flash-id= "{{id}}">Delete Flash</button>
+            <p> {{subject}}</p>
+            <div class="front">
+                {{term}}
+            </div>
+            <div class="back">
+                {{definition}}
+            </div>
+            {{/each}}
+        </div>
+</section>
+
+<script src="/js/flash.js"></script>
+<script src="/js/deletePost.js"></script>

@@ -19,30 +19,24 @@ router.post("/", withAuth, async (req, res) => {
     }
 })
 
-// router.delete("/:id", withAuth, async (req, res) => {
-//     try {
-//       const flashData = await Flashcard.destroy({
-//         where: {
-//           id: req.params.id,
-//           user_id: req.session.user_id,
-//         },
-//       });
+router.delete("/:id", withAuth, async (req, res) => {
+    try {
+      const flashData = await Flashcard.destroy({
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      });
   
-//       if (!flashData) {
-//         res.status(404).json({ message: "no flashcard with this id" });
-//         return;
-//       }
+      if (!flashData) {
+        res.status(404).json({ message: "no flashcard with this id" });
+        return;
+      }
   
-//       res.status(200).json(flashData);
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
-
-
-
-//when getting flashcards make it so user can only get their own flashcards.
-
-
+      res.status(200).json(flashData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 module.exports = router;
