@@ -98,7 +98,7 @@ router.get("/posts/:id", async (req, res) => {
   }
 });
 
-
+//how to make flashcards
 router.get("/flashcards", withAuth, async (req, res) => {
   console.log(`GET /flashcards`);
   res.render("addflash", {
@@ -108,19 +108,20 @@ router.get("/flashcards", withAuth, async (req, res) => {
 
 
 // Cant figure out how to just get one user's flashcard//
-// Rabia Help//
 router.get("/flash", withAuth, async (req, res) => {
   console.log(`GET /flash`);
-  try {
-    const flashData = await Flashcard.findAll({
-      order: [["date_created", "DESC"]],
-      include: [
-        {
 
-        },
-      ],
+  try { 
+     const flashData = await Flashcard.findAll(
+    {
+      order: ["subject"],
+      where:{
+        user_id: req.session.user_id
+     
+      }
+    
     });
-    console.log(flashData);
+  //  return res.json(flashData)
 
     const flash = flashData.map((flash) => flash.get({ plain: true }));
 
