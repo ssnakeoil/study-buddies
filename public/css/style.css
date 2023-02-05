@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 * {
-	font-family: sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	margin: 0;
 	box-sizing: border-box;
 }
 
 body {
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	background: linear-gradient(#ecf5ff, #FFBE94);
 }
+
+
+/* ##############NAV BAR STYLE################## */
 
 body:has(#navToggle:checked) aside {
 	right: 0;
@@ -39,7 +41,7 @@ body:has(#navToggle:checked) .bar:nth-of-type(3) {
 nav {
 	width: 100%;
 	height: 60px;
-	background-color: #cde3b3;
+	background-color: #FFBE94;
 	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 	padding: 10px;
 	display: flex;
@@ -66,7 +68,7 @@ nav > .site-name {
 .bar {
 	width: 100%;
 	height: 2px;
-	background-color: #000;
+	background-color: #fff;
 	position: absolute;
 	transition: all 0.3s;
 }
@@ -95,7 +97,7 @@ aside {
 	right: -300px;
 	width: 300px;
 	height: 100vh;
-	background-color: #eefae0;
+	background: #fff;
 	transition: right 0.3s;
 	padding: 100px 20px;
 	display: flex;
@@ -122,7 +124,7 @@ aside a::before {
 	left: 0;
 	width: 100%;
 	height: 1px;
-	background-color: #283618;
+	background-color: #FFBE94;
 	transform: scaleX(0);
 	transition: transform 0.3s;
 }
@@ -131,25 +133,132 @@ aside a:hover::before {
 	transform: scaleX(1);
 }
 
+/* ############## END NAV BAR STYLE ################## */
+
+/* ############# LOGIN/SIGN UP STYLE ############## */
+
+.logsign-container {
+	display: flex;
+	justify-content: center;
+  }
+  
+  #login-box {
+	min-width: 500px;
+	margin-top: 2%;
+	border-radius: 20px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: #FFBE94;
+  }
+  
+  #log-container {
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  button {
+	margin: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	border: none;
+	color: #fff;
+	background: #000;
+	cursor: pointer;
+  }
+
+/* ############# END LOGIN/SIGN UP STYLE ############## */
+
+/* ################# HOME BUTTONS */
+
+
+.boxes .container {
+	width: 600px;
+	padding: 50px;
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .box {
+	flex: 1;
+	background: #0a51cc;
+	color: #fff;
+	border-radius: 10px;
+	margin: 20px 10px;
+	display: flex;
+	justify-content: center;
+  /*   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6); */
+	padding: 15px 20px;
+  }
+  
+  .box i {
+	margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+	.header .container {
+	  flex-direction: column;
+	  padding-top: 20px;
+	  text-align: center;
+	}
+  
+  .boxes .container {
+	display: block;
+	text-align: center;
+  }
+}
+
+/* ################# END HOME BUTTONS */
+
+/* ############## CHAT BOX STYLE ##################### */
+
 .chatBox{
-    position: fixed; right:50px;bottom:0;background:#004dc6;width:300px;height:30px;text-align:center;border-top-left-radius: 15px;border-top-right-radius: 15px;box-shadow: 0 0px 5px 3px #000;display: flex;justify-content: center;flex-direction: column;
+    position: fixed;
+	left:50px;
+	bottom:0;
+	background: #FF8476;
+	box-shadow: 0px -3px 2px -2px #FF8476;
+	width:100px;
+	height:30px;
+	text-align:center;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
 }
 .chatBox > .chatBoxInner{
     display: none;
 }
 .chatBoxOpen{
-    position: fixed; right:50px;bottom:0;background:#004dc6;width:350px;height:400px;text-align:center;border-top-left-radius: 15px;border-top-right-radius: 15px;box-shadow: 0 0px 5px 3px #000;display: flex;justify-content: center;flex-direction: column;
+    position: fixed;
+	left:50px;
+	bottom:0;
+	background: #FF8476;
+	
+	box-shadow: 0px -3px 2px -2px #FF8476;
+	width:350px;
+	height:400px;
+	text-align:center;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 .chatBoxOpen > .chatBoxInner{
     position: relative;
     display: block;
     padding: 5px;
-    background-color: white;
+    background-color: #2E2D2E;
     height: 100%;
     margin: 0 6px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    box-shadow: 0 0 2px 2px #551a8b;
     overflow: hidden;
    
 }
@@ -166,12 +275,12 @@ aside a:hover::before {
 #closeChat{
     display: none;
     position: absolute;
-    top: -5px;
-    right: 15px;
+    top: -40px;
+    right: 0px;
     width: 30px;
     height: 31px;
     line-height: 30px;
-    background: #4b5e6d;
+    background: red;
     font-size: 20px;
     color: white;
     cursor: pointer;
@@ -180,55 +289,97 @@ aside a:hover::before {
 }
 
 #sender{
-    display: flex;flex-direction: row;border-radius: 5px;padding: 5px 5px;background: #1488CC;background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);background: linear-gradient(to right, #2B32B2, #1488CC);color: white;margin:5px
+    display: flex;
+	flex-direction: row;
+	border-radius: 5px;
+	padding: 5px 5px;
+	background: #1488CC;
+	background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+	background: linear-gradient(to right, #2B32B2, #1488CC);
+	color: white;
+	margin:5px
 }
 
 .flex-100{
     flex: 100%;
 }
 .senderDpWrapper{
-    display:flex;flex-direction:column;align-items:center;
+    display:flex;
+	flex-direction:column;
+	align-items:center;
 }
 .senderDp{
-    border-radius: 50%;width: 50px;height: 50px;background: #314755;background: -webkit-linear-gradient(to right, #26a0da, #314755);background: linear-gradient(to right, #26a0da, #314755);
+    border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background: #FFBE94;
+	/* background: -webkit-linear-gradient(to right, #26a0da, #314755);
+	background: linear-gradient(to right, #26a0da, #314755); */
 }
 .m0f11{
     margin: 0;font-size: 11px;
 }
 
 #receiver{
-    display: flex;flex-direction: row;border-radius: 5px;padding: 5px 5px;background: #1488CC;background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);background: linear-gradient(to right, #2B32B2, #1488CC);color: white;margin:5px
+    display: flex;
+	flex-direction: row;
+	border-radius: 5px;
+	padding: 5px 5px;
+	background: #1488CC;
+	background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+	background: linear-gradient(to right, #2B32B2, #1488CC);
+	color: white;margin:5px
 }
 
 .receiverDpWrapper{
-    display:flex;flex-direction:column;align-items:center;
+    display:flex;
+	flex-direction:column;
+	align-items:center;
 }
 
 .receiverDp{
-    border-radius: 50%;width: 50px;height: 50px;background: #314755;background: -webkit-linear-gradient(to right, #26a0da, #314755);background: linear-gradient(to right, #26a0da, #314755);
+    border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background: #314755;
+	background: -webkit-linear-gradient(to right, #26a0da, #314755);
+	background: linear-gradient(to right, #26a0da, #314755);
 }
 
 .msgFormWrapper{
-    position: absolute;bottom: 0;width: 100%;background: gray;left: 0;display: flex;box-shadow: 0px -3px 2px -2px gray;
+    position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: 2px;
+	left: 0;
+	display: flex;
 }
 
 .msgFormWrapperInner{
-    display: flex;width:100%
+    display: flex;
+	width:100%
 }
 
 .msgTxtArea{
-    width: 100%;overflow:hidden
+    width: 100%;
+	overflow:hidden
 }
 
 #text{
-    resize: none;width:100%
+    resize: none;
+	width:100%
 }
 
 .w20{
     width: 20%;
 }
 #sendMessage{
-    height: 100%;width: 100%;cursor: pointer;color:white;border:none;background:#536976;background: -webkit-linear-gradient(to right, #292E49, #536976);background: linear-gradient(to right, #292E49, #536976);
+    height: 100%;
+	width: 100%;
+	cursor: pointer;
+	color:white;
+	border:none;
+	background: #FF8476;
 }
 
 #chatsList > li{
@@ -245,5 +396,7 @@ aside a:hover::before {
     user-select: none;
 }
 #chatsList > li > span{
-    color: white;
+    color: black;
 }
+
+/* ############# END CHAT BOX STYLE ################# */
