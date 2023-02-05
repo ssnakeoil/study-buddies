@@ -1,34 +1,37 @@
-<div >
-  <div >
-    <div>
+<div class="posts-page-background">
+  <div class="centered-container">
+    <div class="all-posts-container">
       <div>
-        <div class="addpost-header">
-          <h2>Make a Post</h2>
-        </div>
-        <div c>
-          <form >
-          <div class="submit-post">
-            <div >
-              <div >
-                <input class='new-post-title' id="input_text" type="text" data-length="100">
-                <label for="input_text">Enter Post Title</label>
-              </div>
-            </div>
-            <div>
-              <div >
-                <textarea  class="new-post-text" data-length="250"></textarea>
-                <label >Enter post text</label>
-              </div>
-            </div>
-            <br>
-            <button type="submit"  id="post-btn"> Post</button>
-          </div>
+        <img id="brainstorm-banner" src="https://assets.codepen.io/9054081/brainstorm_header.png" />
+        <div id="post-maker-container">
+          <form action="/posts">
+            <button>Return to Posts</button>
           </form>
+          <div class="addpost-header">
+            <h2 class="post-title">⚡ Make a Post ⚡</h2>
+          </div>
+          <div>
+            <form >
+            <div class="submit-post">
+              <div >
+                <div >
+                  <input class='new-post-title' placeholder="⚡ Post Title ⚡" id="input_text" type="text" data-length="100">
+                </div>
+              </div>
+              <div>
+                <div >
+                  <textarea  class="new-post-text" placeholder="Post Text" data-length="250"></textarea>
+                </div>
+              </div>
+              <br>
+              <button type="submit"  id="post-btn"> Post</button>
+            </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <script src="/js/posts.js"></script>
 

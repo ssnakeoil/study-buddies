@@ -41,8 +41,7 @@ body:has(#navToggle:checked) .bar:nth-of-type(3) {
 nav {
 	width: 100%;
 	height: 60px;
-	background-color: #FFBE94;
-	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+	background-color: #000;
 	padding: 10px;
 	display: flex;
 	justify-content: space-between;
@@ -51,7 +50,8 @@ nav {
 	z-index: 4;
 }
 nav > .site-name {
-	color: #283618;
+	padding-left: 50px;
+	color: #fff;
 }
 
 .toggle {
@@ -135,9 +135,97 @@ aside a:hover::before {
 
 /* ############## END NAV BAR STYLE ################## */
 
+/* ################### POST STYLES */
+
+.center-button {
+	display: flex;
+	align-content: center;
+}
+
+.posts-page-background {
+	min-height: 100vh;
+	background: linear-gradient(#00528E, #42A9D5);
+}
+
+.all-posts-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.post-container {
+	width: 600px;
+	margin-left: 50px;
+	background: #00528E;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.comments-container {
+	margin: 5px 50px;
+	border-radius: 20px 0px 20px 20px;
+	padding: 20px;
+	width: 500px;
+	background: #FFE582;
+	transition: ease 0.5s;	
+	opacity: 80%;
+}
+
+.comments-container:hover {
+	opacity: 100%;
+}
+
+.post-user {
+	color: white;
+	margin-left: 10px;
+	font-size: 15px;
+	font-style: oblique;
+}
+
+.comments {
+	background: white;
+	opacity: 50%;
+	transition: ease 0.5s;
+	padding: 10px;
+	width: 600;
+	margin: 2px 0px;
+}
+.comments:hover {
+	opacity: 100%;
+}
+
+.removeComment {
+	display: flex;
+	align-content: left;
+}
+
+.post-title {
+	background: #42A9D5;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+input,
+textarea {
+	width: 100%;
+}
+
+#make-post {
+	border-radius: 0px;
+}
+
+#post-maker-container {
+	padding: 10px;
+	background-color: #00528E;
+	border-radius: 0px 0px 20px 20px;
+}
+
+/* ################### END POST STYLES */
+
 /* ############# LOGIN/SIGN UP STYLE ############## */
 
-.logsign-container {
+.centered-container {
 	display: flex;
 	justify-content: center;
   }
@@ -153,8 +241,10 @@ aside a:hover::before {
 	background: #FFBE94;
   }
   
-  #log-container {
+  #log-container,
+  #sign-up-container {
 	padding: 30px;
+	size: 600px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -174,32 +264,55 @@ aside a:hover::before {
 
 /* ################# HOME BUTTONS */
 
+.boxes {
+	display: flex;
+	align-content: center;
+}
 
-.boxes .container {
-	width: 600px;
-	padding: 50px;
+.boxes,
+.container {
 	display: flex;
 	justify-content: space-between;
   }
   
-  .box {
+.container {	
+	border-radius: 20px;
+	margin-top: 30px;
+	padding: 50px;
+	background-color: white;
+}
+
+/* .container:hover {
+	animation-name: bg-anim;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bg-anim {
+	0% {left:0px; top:0px;}
+	50% {left:0px; top:5px;}
+	100% {left:0px; top:0px;}
+} */
+
+.box {
 	flex: 1;
-	background: #0a51cc;
-	color: #fff;
 	border-radius: 10px;
 	margin: 20px 10px;
 	display: flex;
 	justify-content: center;
-  /*   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6); */
 	padding: 15px 20px;
-  }
+}
   
-  .box i {
+.box img {
+	height: 300px;
+}
+
+.box i {
 	margin-right: 10px;
-  }
+}
   
-  @media (max-width: 768px) {
-	.header .container {
+@media (max-width: 1120px) {
+	.container {
 	  flex-direction: column;
 	  padding-top: 20px;
 	  text-align: center;
@@ -212,6 +325,8 @@ aside a:hover::before {
 }
 
 /* ################# END HOME BUTTONS */
+
+
 
 /* ############## CHAT BOX STYLE ##################### */
 
