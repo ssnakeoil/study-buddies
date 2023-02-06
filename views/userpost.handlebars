@@ -1,0 +1,43 @@
+<div class="posts-page-background">
+  <div class="centered-container">
+    <div class="all-posts-container">
+      <img id="brainstorm-banner" src="https://assets.codepen.io/9054081/brainstorm_header.png" />
+      <div>
+         <div>
+            <form class="center-button" action="/post">
+              <button>Create New Post</button>
+            </form>
+          </div>
+        <div class="post-container">
+          {{#each userpost as |post|}}
+          {{> userpost-details}}
+
+          <div class="comments-container">
+            <form class="form new-comment-form">
+              <div class="form-group comment-form">
+                <label for="comment-text" id="commentLabel"></label>
+                <textarea
+                class="form-input"
+                id="comment-text"
+                name="comment-text" placeholder="Add a comment..."></textarea>
+                <button
+                type="submit"
+                class="addComment"
+                data-post-id="{{id}}"
+                >post</button>
+              </div>
+            </form>
+            <p>Comments for "{{name}}":
+
+            {{#each userpost.comments as |comment|}}
+            {{> comment-details }}
+            {{/each}}
+          </div>
+
+          {{/each}}
+        </div>
+      </div>
+  </div>
+</div>
+<script src="/js/comment.js"></script>
+<script src="/js/deletePost.js"></script>

@@ -11,10 +11,10 @@ async function deletePost(event) {
         },
       });
       if (response.ok) {
-        document.location.replace("/posts");
+        document.location.replace("/userpost");
       } else {
         console.log(response.statusText);
-        alert("You did not write this post!");
+        alert("error");
       }
     }
   }
