@@ -97,6 +97,68 @@ router.get("/posts/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+router.get("/userpost", withAuth, async (req, res) => {
+  console.log(`GET /userpost`);
+
+  try { 
+     const postData = await Post.findAll(
+    {
+      order: ["date_created"],
+      where:{
+        user_id: req.session.user_id
+
+      },
+      include: [
+        {
+          model: Comment,
+          attributes: ["comment", "post_id", "id", "date_created", "user_id"],
+        },
+        {
+          model: User,
+          attributes: ["first_name", "last_name", "id"],
+        },
+      ],
+     
+    
+    });
+    // console.log(postData)
+
+    const userpost = postData.map((userpost) => userpost.get({ plain: true }));
+    console.log(userpost);
+    res.render("userpost", {
+      userpost,
+      logged_in: true,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/userpost/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attribute: ["first_name", "last_name"],
+        },
+      ],
+    });
+    const userpst = postData.get({ plain: true });
+
+    res.render("userpost", {
+      ...userpst,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+
 
 //how to make flashcards
 router.get("/flashcards", withAuth, async (req, res) => {
@@ -105,7 +167,6 @@ router.get("/flashcards", withAuth, async (req, res) => {
     logged_in: true,
   });
 });
-
 
 // Cant figure out how to just get one user's flashcard//
 router.get("/flash", withAuth, async (req, res) => {

@@ -1,10 +1,7 @@
 <div>
   <h2 class="post-title">⚡ {{name}} ⚡</h2>
-  <p class= "post-user"><span hidden id="post-id">{{id}}</span>Posted by: 
-    {{user.first_name}}
-    {{user.last_name}}
-    on
-    {{format_date date_created}}.
+  <p class= "post-user"><span hidden id="post-id">{{id}}</span>Posted on 
+    {{date_created}}.
   </p>
   <div class="comments-container">    
     <div>      
@@ -13,6 +10,10 @@
             {{text}}
           </p>
       </div>
+      <button
+        class="btn delete-post"
+        data-delete-post-id="{{id}}"
+        >Delete Post</button>
       </div>
   </div>
 </div>
