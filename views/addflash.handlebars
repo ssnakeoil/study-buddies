@@ -1,36 +1,39 @@
-<div >
-  <div >
-    <div>
-      <div>
-        <div class="addflash-header">
-          <h2>New Flashcard</h2>
-        </div>
-        <div>
+<div>
+  <div class="centered-container">
+    <div class="all-posts-container">
+      <div id="make-flash">
+        <img id="flash-header" src="https://assets.codepen.io/9054081/flash_button.png" />
+               
+        <div class="flash-body">
+          <div class="addflash-header">
+            <h2>⚡ New Flashcard ⚡</h2>
+          </div>
           <form >
              <div class="submit-flash">
             <div >
               <div >
-                <input class='new-flash-subject' id="input_text" type="text" data-length="25">
-                <label for="input_text">Class Subject</label>
+                <input class='new-flash-subject' placeholder="Class Subject" id="input_text" type="text" data-length="25">
               </div>
             </div>
           <div class="submit-flash">
             <div >
               <div >
-                <input class='new-flash-title' id="input_text" type="text" data-length="25">
-                <label for="input_text">Flash Term</label>
+                <input class='new-flash-title' placeholder="Flash Term" id="input_text" type="text" data-length="25">
               </div>
             </div>
             <div>
               <div "submit-flash">
-                <textarea  class="new-flash-text" data-length="250"></textarea>
-                <label >Type in definition and any key notes</label>
+                <textarea placeholder="Definition and/or key notes" class="new-flash-text" data-length="250"></textarea>
+                <label>Don't forget to save!</label>
               </div>
             </div>
             <br>
             <button type="submit"  id="flash-btn"> Save</button>
           </div>
           </form>
+          <form class="center-button" action="/flash">
+          <button>Return without Saving</button>
+        </form>
         </div>
       </div>
     </div>

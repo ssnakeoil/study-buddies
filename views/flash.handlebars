@@ -1,22 +1,32 @@
-<section class="content">
-    <div class="containers">
-        <form action="/flashcards">
-            <button>Create New Flashcard</button>
-          </form>
-
-        <div class="card">
-            {{#each flash as |flashcard|}}
-            <button class="btn delete-flash" data-delete-flash-id= "{{id}}">Delete Flash</button>
-            <p> {{subject}}</p>
-            <div class="front">
-                {{term}}
+<div class="centered-container">
+  <div>
+    <div>
+    <img id="flash-header" src="https://assets.codepen.io/9054081/flash_button.png" />
+    <form action="/flashcards">
+        <button>⚡ Create New Flashcard ⚡</button>
+    </form>
+            <p>Hover below terms for answers!</p>
+    <div class="content">
+        <div class="containers">
+            
+            <div class="card">
+                {{#each flash as |flashcard|}}
+                <div class="flash-content">
+                    <p><i>{{subject}}:</i> {{term}}</p>
+                        <div class="front">
+                        </div>
+                        <div class="back">
+                            ⚡ {{definition}} ⚡
+                        </div>
+                        <button class="btn delete-flash" data-delete-flash-id= "{{id}}">Delete Flash</button>
+                    </div>
+                    {{/each}}
+                    </div>
+                </div>
             </div>
-            <div class="back">
-                {{definition}}
-            </div>
-            {{/each}}
         </div>
-</section>
+    </div>
+</div>
 
 <script src="/js/flash.js"></script>
 <script src="/js/deletePost.js"></script>
