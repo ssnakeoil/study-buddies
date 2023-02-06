@@ -3,12 +3,13 @@
     <div class="all-posts-container">
       <img id="brainstorm-banner" src="https://assets.codepen.io/9054081/brainstorm_header.png" />
       <div>
-         <div>
-            <form class="center-button" action="/post">
+        <div class="post-container">
+          <form class="center-button" action="/post">
               <button>Create New Post</button>
             </form>
-          </div>
-        <div class="post-container">
+            <form action="/posts">
+              <button>Return to Posts</button>
+            </form>
           {{#each userpost as |post|}}
           {{> userpost-details}}
 
