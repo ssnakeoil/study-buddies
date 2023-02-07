@@ -13,7 +13,7 @@ This is a further expansion on the Study Buddy! Now with new friends! This is a 
 
 ## Installation
 
-N/A
+[Link to the Application](https://study-buddies.herokuapp.com/)
 
 ## Usage
 
