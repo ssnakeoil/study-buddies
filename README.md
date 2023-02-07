@@ -16,7 +16,7 @@ This is a further expansion on the Study Buddy! Now with new friends! This is a 
 [Link to the Application](https://study-buddies.herokuapp.com/)
 
 ## Usage
-
+To use this app, you would need to be a registered user in the database. Loggin in with a registered account, or signing up with a new account should give the user access to all of the features available. There is a homepage, which will have the Study Buddies waiting to be chosen. Flash will show the user all of their flashcards, and will also give the user the ability to generate flashcards. Brainstorm allows the user to make posts and have other registered users comment. The final feature is the chat, which allows the user to chat with an admin if the admin is online.
 
 
 ## Credits
