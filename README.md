@@ -37,7 +37,7 @@ To use this app, you would need to be a registered user in the database. Loggin 
 
 ## License
 
-N/A
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Screenshots
 
