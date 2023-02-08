@@ -1,7 +1,7 @@
 # Study Buddies
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,css" />
+    <img src="https://skillicons.dev/icons?i=js,mysql,html,css" />
   </a>
 </p>
 
@@ -30,10 +30,10 @@ To use this app, you would need to be a registered user in the database. Loggin 
 
 
 ## Credits
-- Link: [Jessica Tran](https://github.com/jessikea) Github 
-- Link: [Stefi Lao](https://github.com/ssnakeoil) Github 
-- Link: [Rabia Khalid](https://github.com/rabia-desing) Github 
-- Link: [Yasmine Mohamed](https://github.com/yasmineashoush5) Github 
+- [Jessica Tran](https://github.com/jessikea) (Github)
+- [Stefi Lao](https://github.com/ssnakeoil) (Github)
+- [Rabia Khalid](https://github.com/rabia-desing) (Github)
+- [Yasmine Mohamed](https://github.com/yasmineashoush5) (Github)
 
 ## License
 
